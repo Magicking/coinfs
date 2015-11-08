@@ -98,7 +98,7 @@ def create_tx(sp, addrs, msg):
   return tx
 
 def get_utxos():
-  utxos = do_rq('listunspent')
+  utxos = do_rq('listunspent', [0])
   addrs = set()
   sps = []
   for i in utxos:
